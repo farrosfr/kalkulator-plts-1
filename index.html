@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator ROI PLTS Atap</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kalkulator Analisis Kelayakan PLTS Atap ☀️</h1>
+            <p>Masukkan data di bawah untuk menghitung estimasi penghematan dan periode kembali modal (ROI) dari investasi PLTS Atap.</p>
+        </header>
+
+        <form id="plts-form">
+            <div class="input-section">
+                <h2>Profil Konsumsi & Biaya</h2>
+                <div class="input-group">
+                    <label for="konsumsi-bulanan">Konsumsi Listrik Bulanan (kWh)</label>
+                    <input type="number" id="konsumsi-bulanan" placeholder="Contoh: 200000" required>
+                </div>
+                <div class="input-group">
+                    <label for="tarif-listrik">Tarif Listrik Saat Ini (Rp / kWh)</label>
+                    <input type="number" id="tarif-listrik" value="1100" required>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <h2>Spesifikasi Sistem PLTS</h2>
+                <div class="input-group">
+                    <label for="kapasitas-plts">Kapasitas Sistem PLTS (kWp)</label>
+                    <input type="number" id="kapasitas-plts" placeholder="Contoh: 200" required>
+                </div>
+                <div class="input-group">
+                    <label for="biaya-investasi">Biaya Investasi (Rp / kWp)</label>
+                    <input type="number" id="biaya-investasi" value="12000000" required>
+                </div>
+            </div>
+
+            <button type="submit">Hitung Analisis</button>
+        </form>
+
+        <div id="hasil-analisis" class="results-container hidden">
+            <h2>Hasil Analisis Kelayakan & ROI</h2>
+            <div class="result-item">
+                <span>Total Estimasi Investasi:</span>
+                <strong id="hasil-investasi"></strong>
+            </div>
+            <div class="result-item">
+                <span>Estimasi Produksi Listrik PLTS per Bulan:</span>
+                <strong id="hasil-produksi-kwh"></strong>
+            </div>
+            <div class="result-item">
+                <span>💰 Estimasi Penghematan per Bulan:</span>
+                <strong id="hasil-hemat-bulan"></strong>
+            </div>
+            <div class="result-item">
+                <span>📈 Estimasi Penghematan per Tahun:</span>
+                <strong id="hasil-hemat-tahun"></strong>
+            </div>
+            <hr>
+            <div class="result-item payback">
+                <span>⌛ Payback Period (Kembali Modal):</span>
+                <strong id="hasil-payback"></strong>
+            </div>
+             <div class="result-item profit">
+                <span>✅ Potensi Keuntungan Setelah Balik Modal (selama 25 tahun):</span>
+                <strong id="hasil-profit"></strong>
+            </div>
+            <p class="disclaimer">
+                *Perhitungan ini adalah estimasi berdasarkan input Anda. Angka riil dapat bervariasi tergantung pada faktor cuaca, lokasi, dan efisiensi komponen. Usia teknis panel surya diasumsikan 25 tahun.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
