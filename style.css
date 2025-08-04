@@ -167,3 +167,72 @@ hr {
 .hidden {
     display: none;
 }
+
+/* ... (kode CSS lainnya tetap sama) ... */
+
+/* Style untuk Kontainer AI Insight */
+#ai-insight-container {
+    margin-top: 1.5rem;
+    border-top: 3px solid var(--success-color);
+}
+
+#ai-insight-container h2 {
+    color: var(--success-color);
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    gap: 1rem;
+    color: #6c757d;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: var(--primary-color);
+    animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#ai-insight-result p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+    white-space: pre-wrap; /* Agar format paragraf dari AI terjaga */
+}
+
+/* Hapus atau ganti style #ai-check-mark yang lama dengan ini */
+#ai-check-mark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /* Jarak antara ikon dan teks */
+}
+
+.check-icon {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--success-color);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid var(--success-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}

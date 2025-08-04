@@ -1,0 +1,18 @@
+{
+  "name": "kalkulator-plts-1",
+  "version": "1.0.0",
+  "description": "Sebuah aplikasi web interaktif yang dirancang untuk membantu pemilik rumah atau bisnis dalam menganalisis kelayakan finansial dari investasi Pembangkit Listrik Tenaga Surya (PLTS) Atap. Aplikasi ini menghitung estimasi biaya, penghematan, dan yang terpenting, *Payback Period* atau masa kembali modal.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "openai": "^5.11.0"
+  }
+}
